@@ -1,0 +1,65 @@
+1. Python Basics
+Data Types: primitive
+    int
+    float
+    str
+    bool
+Variable: Identifier, holds the data 
+
+2. Derived Data
+
+    list
+    oblect of the class
+    Tuple
+    Dictionary
+
+single name -> many names
+arr = []
+
+Tuple
+employee = [("abc", 20, 40000, True), ("xyz", 21, 50000, True)]
+
+Dictionary
+employee = [{name:"abc", age:20, salary:40000, is_active:True}, {name:"xyz", age:21, salary:50000, is_active:True}]
+
+memory layout - 
+    heap 
+        ref1[abc]
+        ref2[21]
+        ref3[40000]
+        ref4[True] 
+        ref5['abc']['xyz']    index = 0,1,....
+        ref6 [ref7][ref8->ref10][ref9]
+        ref7 ['abc'][21][40000][True]   index = 0,1,.
+        ref8 #abc elements
+        ref9 #xyz elements
+        ref10 ['abc'][21][50000][True]
+    stack
+        name[ref1]
+        age[ref2]
+        salary[ref3]
+        is_active[ref4]
+        names[ref5]
+        employees [ref6]
+print(names[1], employees[1][1])
+
+    change_abc(abc):
+        name, age, salary, is_active = abc   #Tuple
+        salary += 10000
+        return (name, age, salary, is_active)
+    employees[1] = change_abc(employees[1])
+
+
+1. Python
+2. Git 
+3. Variables and primitive Types vs Derived Types
+tuple, object, Dictionary
+list
+app of array as the database and menu driven programming
+    - employee management
+    - tuple as employee
+next:
+    -Dictionary as employee
+    -object as employee
+
+    -persistent store: to save in file(binary file | json | csv)

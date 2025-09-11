@@ -1,0 +1,72 @@
+Types
+    primitive: int, float, bool
+    Derived: str, list, tuple, dict, set/frozenset
+
+writer = open(filename, 'w')
+writer.write(something)
+....
+writer.close()
+
+with open(filename, 'w') as writer
+    writer.write(something)
+    .....
+
+functions:
+
+def find_salary_sum(first, second):
+    return first+second
+
+variable argument -> args of type tuple
+def find_salary_sum(first, second, *salary):
+    res = first+second
+    for sal in salary:
+        res += sal
+        return res
+
+variable argument -> args of type dict
+def find_salary_sum(first, second, **salary):
+    res = first+second
+    for sal in salary:
+        res += salary[sal]
+        return res
+
+Default args
+def find_salary_sum(first, second, bonus=500):
+    return (first+bonus) + (second+bonus)
+
+print(find_salary_sum(1000, 2000))
+
+python debugger
+    from vsc,
+        Run and debug
+        -> Picked the programming lang
+        -> file to be debugged
+    Then debugger is on.
+    we have options:
+    continue | step over | step into | step out
+
+
+pickle along with the file handle:
+    to persist store/ retrieve the python object into/ from the file
+    python object is stored as binary [byte by byte]
+
+    python2 - single char is of ascii ie single byte ie 8 bits
+    python3 - single char is of unicode ie 2 byte ie 16 bits
+
+    to store the text: file operations
+    to store the object: binary file is pickled
+    object -> memory -> byte by byte => moved to the file
+    byte by byte coversion called serialization
+        object to file
+
+
+    employee app -> inmemory array -> element: tuple
+    employee app -> inmemory array -> element: dict
+    employee app -> binary file storage -> element: dict
+    employee app -> json file storage -> element: dict
+
+
+Assignment: 2 problems
+Completing the application:
+    Flight: id, number, airline_name, capacity, price, source, destination
+    1. json DB 2. binary DB

@@ -1,0 +1,21 @@
+2025-09-11 12:19:20,429 [INFO] BEGIN (implicit)
+2025-09-11 12:19:20,434 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 12:19:20,435 [INFO] [generated in 0.00106s] ()
+2025-09-11 12:19:20,437 [INFO] read all employee
+2025-09-11 14:26:13,877 [INFO] BEGIN (implicit)
+2025-09-11 14:26:13,880 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 14:26:13,881 [INFO] [generated in 0.00112s] (101, 'Stuti', 22, 50000.0, 1)
+2025-09-11 14:26:13,884 [INFO] ROLLBACK
+2025-09-11 14:26:13,884 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (101, 'Stuti', 22, 50000.0, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-11 14:43:00,451 [INFO] BEGIN (implicit)
+2025-09-11 14:43:00,453 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 14:43:00,453 [INFO] [generated in 0.00061s] (101, 'Stuti', 22, 50000.0, 1)
+2025-09-11 14:43:00,454 [INFO] ROLLBACK
+2025-09-11 14:43:00,455 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (101, 'Stuti', 22, 50000.0, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)

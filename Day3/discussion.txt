@@ -1,0 +1,45 @@
+app
+    - sql db- sqlite - orm
+    - exception handling
+        - custom exception
+        - raise exception
+    - logging into file
+    - unit test
+
+    - module/ package
+    - object oriented programming
+    - datetime module
+
+sqlite: file RDBMS - SQL DB - lightweight
+RDBMS: oracle, sql server, postgres, mysql
+
+SQL vs NoSQL( mongodb/ cassandra etc)
+SQL: table is foundation where we will have data 
+     relations like constraints - referential integrity
+     table - rows - record
+           - columns - meta data about details of the data
+
+NoSQL: mongodb - (json / bson) document replacement for table
+
+    SQL         NoSQL
+    db          db
+    table       collection
+    row         document
+
+DB Browser for SQLite - client tool to work with sqlite file
+
+Day3/emp_app_json_dict rename as 
+Day3/emp_app_sql_dict
+    - app.py (no change)
+    - db.json.py (delete it)
+    - repo_json_dict.py (rename it as) repo_sql_dict
+
+sqlalchemy - is not core module - we have to install it
+    In terminal: prompt:
+        $ pip install SQLAlchemy
+    
+    To check:
+        $ pip list
+sqlite - core module
+
+SQLAlchemy is the ORM library/ python module
