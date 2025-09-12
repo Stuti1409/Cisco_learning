@@ -1,6 +1,5 @@
 from db import repo_sql_dict as repo
 
-
 def menu():
     message = '''
 Options are:
@@ -28,7 +27,8 @@ Your Option:'''
             print(f"{ex}")
         except repo.DatabaseError as ex:
             print(f"{ex}")
-    
+
+        
     elif choice == 2:
         print('List of Employees:')
         for employee in repo.read_all_employee():

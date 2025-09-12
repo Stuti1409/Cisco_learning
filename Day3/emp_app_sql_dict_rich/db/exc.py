@@ -1,11 +1,11 @@
 class EmployeeException(Exception):
-    pass
+    pass 
 
 class EmployeeNotFoundError(EmployeeException):
-    pass
+    pass 
 
 class EmployeeAlreadyExistError(EmployeeException):
-    pass
+    pass 
 
 class DatabaseError(EmployeeException):
-    pass
+    pass 

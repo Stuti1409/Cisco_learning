@@ -1,6 +1,5 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, Integer, Float, Boolean
-from .db_models import Base, Employee
 
 Base = declarative_base() # model base class
 
