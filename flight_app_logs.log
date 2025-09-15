@@ -1,0 +1,13 @@
+2025-09-15 08:53:28,155 [INFO] BEGIN (implicit)
+2025-09-15 08:53:28,162 [INFO] INSERT INTO "Fights" (id, number, airline_name, capacity, price, source, destination) VALUES (?, ?, ?, ?, ?, ?, ?)
+2025-09-15 08:53:28,163 [INFO] [generated in 0.00319s] (1001, 'I007', 'Indigo', 250, 5000.0, 'Kanpur', 'Hyderabad')
+2025-09-15 08:53:28,169 [INFO] COMMIT
+2025-09-15 08:53:28,184 [INFO] flight created.
+2025-09-15 08:55:05,669 [INFO] BEGIN (implicit)
+2025-09-15 08:55:05,670 [INFO] INSERT INTO "Fights" (id, number, airline_name, capacity, price, source, destination) VALUES (?, ?, ?, ?, ?, ?, ?)
+2025-09-15 08:55:05,673 [INFO] [cached since 97.51s ago] (1001, 'I007', 'Indigo', 250, 5000.0, 'Kanpur', 'Hyderabad')
+2025-09-15 08:55:05,676 [INFO] ROLLBACK
+2025-09-15 08:55:05,676 [ERROR] Duplicate flight id:(sqlite3.IntegrityError) UNIQUE constraint failed: Fights.id
+[SQL: INSERT INTO "Fights" (id, number, airline_name, capacity, price, source, destination) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: (1001, 'I007', 'Indigo', 250, 5000.0, 'Kanpur', 'Hyderabad')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
