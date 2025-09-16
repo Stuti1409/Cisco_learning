@@ -2,7 +2,11 @@ APIs of Employee Management
 
 http 
 method      URL                 py function
+
 POST        /employees          def create()
+    request: {"id":101, "name": "Dravid", "age": 40, "salary": 2500, "is_active":true}
+    response: OK 2002 json {"id":101, "name": "Dravid", "age": 40, "salary": 2500, "is_active":true}
+
 GET         /employees          def read_all()
 GET         /employees/101      def read_by_id(app_id)
 PUT         /employees/101      def update(app_id)
