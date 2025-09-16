@@ -1,7 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from Day5.hrms.app.mail_config import app_password, from_address, to_address
+from app.mail_config import app_password, from_address, to_address
 
 def send_gmail(to_address, subject, body):
     # Your Gmail address and App Password
@@ -28,7 +28,3 @@ def send_gmail(to_address, subject, body):
     except Exception as e:
         print("Error:", e)
         return False
-
-#to_address = "receiver_username@gmail.com"
-result = send_gmail(to_address, "Test Subject", "Hello from Python!")
-print("Mail sent successfully?" , result)

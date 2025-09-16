@@ -11,3 +11,11 @@ GET         /employees          def read_all()
 GET         /employees/101      def read_by_id(app_id)
 PUT         /employees/101      def update(app_id)
 DELETE      /employees/101      def delete(app_id)
+------------------------------------------------------------------------
+APIs app                - backend/server app
+Consumer app of APIs    - frontend/client app
+SMTP - network automation - simple mail transfer protocol using gmail
+
+web scrap : from website/ webpages if they are legal/ public sites
+    if data is not getting from APIs of the companies/ orgs/ business
+    
