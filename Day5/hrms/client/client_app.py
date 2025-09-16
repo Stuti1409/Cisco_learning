@@ -1,4 +1,5 @@
-import repo
+
+import client.repo as repo
 
 def menu():
     message = '''

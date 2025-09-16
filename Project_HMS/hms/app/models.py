@@ -23,3 +23,4 @@ class Patient(db.Model):
             'disease': self.disease,
             'is_admit': self.is_admit
         }
+    

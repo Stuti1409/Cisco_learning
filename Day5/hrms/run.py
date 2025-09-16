@@ -1,3 +1,3 @@
-from app.routes import app
+from app.routes import application 
 
-app.run(debug=True)
+application.run(debug=True)

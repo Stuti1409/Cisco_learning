@@ -31,7 +31,7 @@ def create_patient():
     disease : {patient_dict['disease']}
     is_admit : {patient_dict['is_admit']}
     """
-    emailer.send_email(emailer.TO_ADDRESS, subject, body)
+    emailer.send_email(emailer.to_address, subject, body)
 
     return jsonify(saved_patient)
 

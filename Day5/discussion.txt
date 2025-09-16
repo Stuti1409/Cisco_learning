@@ -1,21 +1,50 @@
-APIs of Employee Management
 
-http 
-method      URL                 py function
+APIs of Employee Management 
+-----------------------------------------------------------------------------------
+http
+method      url             py fun
+-----------------------------------------------------------------------------------
+POST        /employees      def create()
+    REQ: {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
 
-POST        /employees          def create()
-    request: {"id":101, "name": "Dravid", "age": 40, "salary": 2500, "is_active":true}
-    response: OK 2002 json {"id":101, "name": "Dravid", "age": 40, "salary": 2500, "is_active":true}
-
-GET         /employees          def read_all()
-GET         /employees/101      def read_by_id(app_id)
-PUT         /employees/101      def update(app_id)
-DELETE      /employees/101      def delete(app_id)
-------------------------------------------------------------------------
-APIs app                - backend/server app
-Consumer app of APIs    - frontend/client app
-SMTP - network automation - simple mail transfer protocol using gmail
-
-web scrap : from website/ webpages if they are legal/ public sites
-    if data is not getting from APIs of the companies/ orgs/ business
+GET         /employees      def read_all()
+    RES: OK 200 json [{"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}]
     
+GET         /employees/101  def read_by_id(app_id)
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":1200,"is_active":true}
+
+PUT         /employees/101  def update(app_id)
+    REQ: {"salary":2200}
+    RES: OK 200 json {"id":101,"name":"Dravid","age":50,"salary":2200,"is_active":true}
+    
+DELETE      /employees/101  def delete_employee(app_id)
+    RES: OK 200 json {"message" : "Deleted Successfully"}
+-----------------------------------------------------------------------------------
+APIs app                - backend/server app 
+Consumer app of APIs    - frontend/client app 
+SMTP - network automation - simple mail trasfer protocol using gmail - app password 
+
+web scrap : from web site / web pages if they are legal / public sites 
+    if data is not getting from APIs of the companies / orgs / business sectors 
+
+
+    http://quotes.toscrape.com
+    http://books.toscrape.com/catalogue
+    https://www.bbc.com/news
+
+    robot.txt Disallow: pagesNotAllowedList
+-----------------------------------------------------------------------------------
+scrap :
+    concurrency programming 
+        - thread - multi threading 
+        - process - multi processing 
+        - co-routines 
+
+    parallel programming (modern) - multi-cores, multi-processors
+
+
+    - scrape_quotes_page - scraps given page of quotes site - 1 task 
+        many times calling scrape_quotes_page fn will scrap many pages 
+        if along with concurrency technique, we will scrap concurrently 
+    - scrape_books_page  - scraps given page of books site  - 1 task 
