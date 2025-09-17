@@ -1,8 +1,8 @@
 
 from flask import Flask, request, jsonify 
 from datetime import datetime
-import app.crud as crud 
-from app.config import config 
+import Project.hms.app.crud as crud 
+from Project.hms.app.config import config 
 import app.mail as mail 
 application = Flask(__name__)
 

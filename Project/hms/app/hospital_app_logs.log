@@ -1,0 +1,17 @@
+2025-09-17 08:40:45,807 [INFO] BEGIN (implicit)
+2025-09-17 08:40:45,808 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 08:40:45,808 [INFO] [raw sql] ()
+2025-09-17 08:40:45,810 [INFO] PRAGMA temp.table_info("patients")
+2025-09-17 08:40:45,811 [INFO] [raw sql] ()
+2025-09-17 08:40:45,812 [INFO] 
+CREATE TABLE patients (
+	id INTEGER NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	age INTEGER NOT NULL, 
+	disease VARCHAR(255) NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-09-17 08:40:45,812 [INFO] [no key 0.00042s] ()
+2025-09-17 08:40:45,829 [INFO] COMMIT

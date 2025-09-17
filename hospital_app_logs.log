@@ -1,0 +1,75 @@
+2025-09-16 23:28:14,812 [INFO] BEGIN (implicit)
+2025-09-16 23:28:14,813 [INFO] PRAGMA main.table_info("patients")
+2025-09-16 23:28:14,813 [INFO] [raw sql] ()
+2025-09-16 23:28:14,814 [INFO] PRAGMA temp.table_info("patients")
+2025-09-16 23:28:14,814 [INFO] [raw sql] ()
+2025-09-16 23:28:14,815 [INFO] 
+CREATE TABLE patients (
+	id INTEGER NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	age INTEGER NOT NULL, 
+	disease VARCHAR(255) NOT NULL, 
+	is_admit VARCHAR(10), 
+	PRIMARY KEY (id)
+)
+
+
+2025-09-16 23:28:14,816 [INFO] [no key 0.00040s] ()
+2025-09-16 23:28:14,833 [INFO] COMMIT
+2025-09-16 23:28:14,904 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-16 23:28:14,904 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-16 23:28:14,906 [INFO]  * Restarting with stat
+2025-09-16 23:28:15,601 [INFO] BEGIN (implicit)
+2025-09-16 23:28:15,602 [INFO] PRAGMA main.table_info("patients")
+2025-09-16 23:28:15,603 [INFO] [raw sql] ()
+2025-09-16 23:28:15,604 [INFO] COMMIT
+2025-09-16 23:28:15,627 [WARNING]  * Debugger is active!
+2025-09-16 23:28:15,629 [INFO]  * Debugger PIN: 115-571-964
+2025-09-16 23:30:17,030 [INFO]  * Detected change in 'c:\\Users\\stsharm2\\OneDrive - Cisco\\Desktop\\Cisco-learning\\Cisco_learning\\Project_HMS\\hms\\app\\crud.py', reloading
+2025-09-16 23:30:17,137 [INFO]  * Restarting with stat
+2025-09-17 08:55:03,243 [INFO] BEGIN (implicit)
+2025-09-17 08:55:03,245 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 08:55:03,246 [INFO] [raw sql] ()
+2025-09-17 08:55:03,247 [INFO] COMMIT
+2025-09-17 08:55:03,298 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-17 08:55:03,298 [INFO] [33mPress CTRL+C to quit[0m
+2025-09-17 08:55:03,300 [INFO]  * Restarting with stat
+2025-09-17 08:55:04,130 [INFO] BEGIN (implicit)
+2025-09-17 08:55:04,131 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 08:55:04,131 [INFO] [raw sql] ()
+2025-09-17 08:55:04,132 [INFO] COMMIT
+2025-09-17 08:55:04,153 [WARNING]  * Debugger is active!
+2025-09-17 08:55:04,156 [INFO]  * Debugger PIN: 115-571-964
+2025-09-17 08:55:24,413 [INFO] BEGIN (implicit)
+2025-09-17 08:55:24,417 [INFO] INSERT INTO patients (id, name, age, disease) VALUES (?, ?, ?, ?)
+2025-09-17 08:55:24,417 [INFO] [generated in 0.00053s] (101, 'John', 35, 'Flu')
+2025-09-17 08:55:24,420 [INFO] COMMIT
+2025-09-17 08:55:24,434 [INFO] Patient created: {'id': 101, 'name': 'John', 'age': 35, 'disease': 'Flu'}
+2025-09-17 08:55:24,435 [INFO] BEGIN (implicit)
+2025-09-17 08:55:24,439 [INFO] SELECT patients.id AS patients_id, patients.name AS patients_name, patients.age AS patients_age, patients.disease AS patients_disease 
+FROM patients 
+WHERE patients.id = ?
+2025-09-17 08:55:24,439 [INFO] [generated in 0.00079s] (101,)
+2025-09-17 08:55:28,398 [INFO] Email sent successfully to lasyam2023@gmail.com with subject: 2025-09-17 08:55:24 Patient John Created
+2025-09-17 08:55:28,399 [INFO] ROLLBACK
+2025-09-17 08:55:28,400 [INFO] 127.0.0.1 - - [17/Sep/2025 08:55:28] "POST /patients HTTP/1.1" 200 -
+2025-09-17 09:01:00,834 [INFO] 127.0.0.1 - - [17/Sep/2025 09:01:00] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-17 09:01:00,913 [INFO] 127.0.0.1 - - [17/Sep/2025 09:01:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-17 09:03:58,518 [INFO]  * Detected change in 'c:\\Users\\stsharm2\\OneDrive - Cisco\\Desktop\\Cisco-learning\\Cisco_learning\\Project\\hms\\app\\emailer.py', reloading
+2025-09-17 09:03:58,631 [INFO]  * Restarting with stat
+2025-09-17 09:03:59,446 [INFO] BEGIN (implicit)
+2025-09-17 09:03:59,447 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 09:03:59,447 [INFO] [raw sql] ()
+2025-09-17 09:03:59,448 [INFO] COMMIT
+2025-09-17 09:03:59,466 [WARNING]  * Debugger is active!
+2025-09-17 09:03:59,469 [INFO]  * Debugger PIN: 115-571-964
+2025-09-17 09:04:20,538 [INFO]  * Detected change in 'c:\\Users\\stsharm2\\OneDrive - Cisco\\Desktop\\Cisco-learning\\Cisco_learning\\Project\\hms\\app\\emailer.py', reloading
+2025-09-17 09:04:20,650 [INFO]  * Restarting with stat
+2025-09-17 09:04:21,405 [INFO] BEGIN (implicit)
+2025-09-17 09:04:21,406 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 09:04:21,406 [INFO] [raw sql] ()
+2025-09-17 09:04:21,407 [INFO] COMMIT
+2025-09-17 09:04:21,428 [WARNING]  * Debugger is active!
+2025-09-17 09:04:21,430 [INFO]  * Debugger PIN: 115-571-964

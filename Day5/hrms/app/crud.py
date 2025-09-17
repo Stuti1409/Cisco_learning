@@ -1,4 +1,4 @@
-from app.models import db, Employee 
+from Project.hms.app.models import db, Employee 
 
 def create_employee(employee):
     employee_model = Employee(id = employee['id'],

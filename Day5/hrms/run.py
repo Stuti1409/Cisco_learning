@@ -1,3 +1,3 @@
-from app.routes import application 
+from Project.hms.app.routes import application 
 
 application.run(debug=True)
