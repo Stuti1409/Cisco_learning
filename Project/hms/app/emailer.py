@@ -29,5 +29,5 @@ def send_email(to_address, subject, body):
         logger.info(f"Email sent successfully to {to_address} with subject: {subject}")
         return True
     except Exception as e:
-        logger.error(f"Failed to send email: {e}")
+        logger.error("Failed to send email: %s", e)
         raise EmailError(str(e))

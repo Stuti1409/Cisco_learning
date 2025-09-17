@@ -1,8 +1,14 @@
+"""
+exceptions.py
+
+Custom exception classes for the Hospital Management System.
+These exceptions handle errors related to patients, database,
+and email notifications.
+"""
+
 class HMSException(Exception):
     """Base exception class for Hospital Management System"""
-    pass
-
-
+    
 class PatientNotFoundError(HMSException):
     """Raised when a patient with the given ID is not found"""
     def __init__(self, patient_id):

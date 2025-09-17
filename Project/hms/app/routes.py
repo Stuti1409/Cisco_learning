@@ -38,15 +38,15 @@ def create_patient():
         try:
             emailer.send_email(emailer.TO_ADDRESS, subject, body)
         except EmailError as e:
-            logger.error(f"Email sending failed: {e}")
+            logger.error("Email sending failed: %s",e)
 
         return jsonify(saved_patient)
 
     except DatabaseError as e:
-        logger.error(f"Database error in create_patient: {e}")
+        logger.error("Database error in create_patient: %s",e)
         return jsonify({"error": str(e)}), 400
     except Exception as e:
-        logger.error(f"Unexpected error in create_patient: {e}")
+        logger.error("Unexpected error in create_patient: %s",e)
         return jsonify({"error": "Internal server error"}), 500
 
 
@@ -57,10 +57,10 @@ def read_all_patients():
         patients = crud.read_all_patients()
         return jsonify(patients)
     except DatabaseError as e:
-        logger.error(f"Database error in read_all_patients: {e}")
+        logger.error("Database error in read_all_patients: %s",e)
         return jsonify({"error": str(e)}), 500
     except Exception as e:
-        logger.error(f"Unexpected error in read_all_patients: {e}")
+        logger.error("Unexpected error in read_all_patients: %s",e)
         return jsonify({"error": "Internal server error"}), 500
 
 
@@ -71,13 +71,13 @@ def read_patient_by_id(patient_id):
         patient = crud.read_by_id(patient_id)
         return jsonify(patient)
     except PatientNotFoundError as e:
-        logger.error(f"Patient not found: {e}")
+        logger.error("Patient not found: %s",e)
         return jsonify({"error": str(e)}), 404
     except DatabaseError as e:
-        logger.error(f"Database error in read_patient_by_id: {e}")
+        logger.error("Database error in read_patient_by_id: %s",e)
         return jsonify({"error": str(e)}), 500
     except Exception as e:
-        logger.error(f"Unexpected error in read_patient_by_id: {e}")
+        logger.error("Unexpected error in read_patient_by_id: %s",e)
         return jsonify({"error": "Internal server error"}), 500
 
 
@@ -89,13 +89,13 @@ def update_patient(patient_id):
         updated_patient = crud.update(patient_id, patient_dict)
         return jsonify(updated_patient)
     except PatientNotFoundError as e:
-        logger.error(f"Patient not found: {e}")
+        logger.error("Patient not found: %s",e)
         return jsonify({"error": str(e)}), 404
     except DatabaseError as e:
-        logger.error(f"Database error in update_patient: {e}")
+        logger.error("Database error in update_patient: %s",e)
         return jsonify({"error": str(e)}), 500
     except Exception as e:
-        logger.error(f"Unexpected error in update_patient: {e}")
+        logger.error("Unexpected error in update_patient: %s",e)
         return jsonify({"error": "Internal server error"}), 500
 
 
@@ -106,11 +106,11 @@ def delete_patient(patient_id):
         crud.delete_patient(patient_id)
         return jsonify({"message": "Deleted Successfully"})
     except PatientNotFoundError as e:
-        logger.error(f"Patient not found: {e}")
+        logger.error("Patient not found: %s",e)
         return jsonify({"error": str(e)}), 404
     except DatabaseError as e:
-        logger.error(f"Database error in delete_patient: {e}")
+        logger.error("Database error in delete_patient: %s",e)
         return jsonify({"error": str(e)}), 500
     except Exception as e:
-        logger.error(f"Unexpected error in delete_patient: {e}")
+        logger.error("Unexpected error in delete_patient: %s",e)
         return jsonify({"error": "Internal server error"}), 500

@@ -1,3 +1,9 @@
+"""
+logger.py
+
+This module configures application-wide logging for the Hospital Management System.
+All logs are stored in 'hospital_app_logs.log' with timestamps and log levels.
+"""
 
 import logging
 
