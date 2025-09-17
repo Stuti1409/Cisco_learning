@@ -73,3 +73,11 @@ WHERE patients.id = ?
 2025-09-17 09:04:21,407 [INFO] COMMIT
 2025-09-17 09:04:21,428 [WARNING]  * Debugger is active!
 2025-09-17 09:04:21,430 [INFO]  * Debugger PIN: 115-571-964
+2025-09-17 09:58:30,854 [INFO]  * Detected change in 'c:\\Users\\stsharm2\\OneDrive - Cisco\\Desktop\\Cisco-learning\\Cisco_learning\\Project\\hms\\app\\scraper.py', reloading
+2025-09-17 09:58:31,057 [INFO]  * Restarting with stat
+2025-09-17 09:58:32,846 [INFO] BEGIN (implicit)
+2025-09-17 09:58:32,848 [INFO] PRAGMA main.table_info("patients")
+2025-09-17 09:58:32,848 [INFO] [raw sql] ()
+2025-09-17 09:58:32,849 [INFO] COMMIT
+2025-09-17 09:58:32,898 [WARNING]  * Debugger is active!
+2025-09-17 09:58:32,904 [INFO]  * Debugger PIN: 115-571-964
